@@ -3,7 +3,7 @@ import { WebView } from "react-native-webview";
 import Constants from "expo-constants";
 
 export default function HomeScreen() {
-  return <WebView source={{ uri: "https://expo.dev" }} />;
+  return <WebView source={{ uri: "https://bookshelf-olive-mu.vercel.app/" }} />;
 }
 
 const styles = StyleSheet.create({
