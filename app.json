@@ -2,6 +2,7 @@
   "expo": {
     "name": "bookshelf-app",
     "slug": "bookshelf-app",
+    "owner": "26krkz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
