@@ -11,6 +11,10 @@ export function useLoginOnGoogleAuth() {
     scopes: ["profile", "email"],
   });
 
+  // eas build -p android --profile preview
+  // eas env:update
+  // eas build:run -p android
+
   useEffect(() => {
     // if (response?.type === "success") {
     //   const { authentication } = response;
