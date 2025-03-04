@@ -12,11 +12,19 @@ export function useLoginOnGoogleAuth() {
   });
 
   useEffect(() => {
-    if (response?.type === "success") {
-      const { authentication } = response;
-      if (authentication?.accessToken) {
-        // ✅ WebView にトークンを送る
-        webViewRef.current?.postMessage(JSON.stringify({ token: authentication.accessToken }));
+    // if (response?.type === "success") {
+    //   const { authentication } = response;
+    //   if (authentication?.accessToken) {
+    //     // ✅ WebView にトークンを送る
+    //     webViewRef.current?.postMessage(JSON.stringify({ token: authentication.accessToken }));
+    //   }
+    // }
+    if (response) {
+      console.log("Auth Response:", response);
+      if (response.type === "success") {
+        console.log("Access Token:", response.params.access_token);
+      } else {
+        console.error("OAuth failed:", response);
       }
     }
   }, [response]);
